@@ -1,0 +1,61 @@
+case_id,statement_id,source_id,text,expected_extracted,expected_topic,expected_scope_type,evidence_required
+B001,B001A,DOC_A,Course registration closes Friday.,True,registration_deadline,same_scope_same_time,True
+B001,B001B,DOC_B,Course registration closes Wednesday.,True,registration_deadline,same_scope_same_time,True
+B002,B002A,DOC_A,Customers may request refunds within 30 days.,True,refund_window,same_scope_same_time,True
+B002,B002B,DOC_B,Refund requests must be submitted within 14 days.,True,refund_window,same_scope_same_time,True
+B003,B003A,DOC_A,The laptop has a 24-month warranty.,True,warranty_laptop,different_scope,True
+B003,B003B,DOC_B,The battery has a 12-month warranty.,True,warranty_laptop,different_scope,True
+B004,B004A,DOC_A,The refund window was 30 days in the 2024 policy.,True,refund_historical,non_overlapping_time,True
+B004,B004B,DOC_B,The refund window is 14 days under the 2025 policy.,True,refund_historical,non_overlapping_time,True
+B005,B005A,DOC_A,The 2026 policy allows refunds within 30 days.,True,refund_current,same_scope_same_time,True
+B005,B005B,DOC_B,The 2026 website says refunds must be requested within 14 days.,True,refund_current,same_scope_same_time,True
+B006,B006A,DOC_A,The application requires Java 17 or later.,True,java_requirement,requirement_environment,True
+B006,B006B,DOC_B,The production server runs Java 11.,True,java_requirement,requirement_environment,True
+B007,B007A,DOC_A,The support desk opens at 9:00 AM.,True,office_hours,same_scope_same_time,True
+B007,B007B,DOC_B,The support desk opens at 9:00 AM.,True,office_hours,same_scope_same_time,True
+B008,B008A,DOC_A,On-campus students must maintain 75% attendance.,True,attendance_remote,different_scope,True
+B008,B008B,DOC_B,Online students must maintain 60% attendance.,True,attendance_remote,different_scope,True
+B009,B009A,DOC_A,Employees receive 18 days of annual leave.,True,leave_limit,same_scope_same_time,True
+B009,B009B,DOC_B,Employees receive 12 days of annual leave.,True,leave_limit,same_scope_same_time,True
+B010,B010A,DOC_A,The 2023 handbook provided 15 days of annual leave.,True,leave_update,non_overlapping_time,True
+B010,B010B,DOC_B,The 2025 handbook provides 18 days of annual leave.,True,leave_update,non_overlapping_time,True
+B011,B011A,DOC_A,"The fee is INR 10,000 per semester.",True,tax_unit,different_period_basis,True
+B011,B011B,DOC_B,"The fee is INR 10,000 per academic year.",True,tax_unit,different_period_basis,True
+B012,B012A,DOC_A,Domestic delivery takes 3–5 business days.,True,shipping_scope,different_scope,True
+B012,B012B,DOC_B,International delivery takes 7–12 business days.,True,shipping_scope,different_scope,True
+B013,B013A,DOC_A,Passwords must contain at least 12 characters.,True,password_length,same_scope_same_time,True
+B013,B013B,DOC_B,Passwords must contain at least 8 characters.,True,password_length,same_scope_same_time,True
+B014,B014A,DOC_A,Passwords must contain at least 12 characters.,True,password_additional,different_attribute,True
+B014,B014B,DOC_B,Passwords must include at least one number.,True,password_additional,different_attribute,True
+B015,B015A,DOC_A,Logs are retained for 90 days.,True,retention,same_scope_same_time,True
+B015,B015B,DOC_B,Logs are retained for 30 days.,True,retention,same_scope_same_time,True
+B016,B016A,DOC_A,Logs were retained for 90 days until June 2024.,True,retention_superseded,non_overlapping_time,True
+B016,B016B,DOC_B,"Since July 2024, logs are retained for 30 days.",True,retention_superseded,non_overlapping_time,True
+B017,B017A,DOC_A,Applicants must be at least 18 years old.,True,minimum_age,same_scope_same_time,True
+B017,B017B,DOC_B,Applicants must be at least 21 years old.,True,minimum_age,same_scope_same_time,True
+B018,B018A,DOC_A,Applicants to the standard program must be 18+.,True,age_scope,different_scope,True
+B018,B018B,DOC_B,Applicants to the advanced program must be 21+.,True,age_scope,different_scope,True
+B019,B019A,DOC_A,The API limit is 100 requests per minute.,True,api_rate,same_scope_same_time,True
+B019,B019B,DOC_B,The API limit is 100 requests per hour.,True,api_rate,same_scope_same_time,True
+B020,B020A,DOC_A,The application fee is USD 100.,True,currency,different_currency,True
+B020,B020B,DOC_B,The application fee is EUR 100.,True,currency,different_currency,True
+B021,B021A,DOC_A,Database backups run every 24 hours.,True,backup_frequency,same_scope_same_time,True
+B021,B021B,DOC_B,Database backups run once per day.,True,backup_frequency,same_scope_same_time,True
+B022,B022A,DOC_A,Customer data is stored in the EU region.,True,data_region,same_scope_same_time,True
+B022,B022B,DOC_B,Customer data is stored in the US region.,True,data_region,same_scope_same_time,True
+B023,B023A,DOC_A,Production data is stored in the EU.,True,data_region_scope,different_scope,True
+B023,B023B,DOC_B,Analytics replicas are stored in the US.,True,data_region_scope,different_scope,True
+B024,B024A,DOC_A,The contract term is 12 months.,True,contract_term,same_scope_same_time,True
+B024,B024B,DOC_B,The contract term is one year.,True,contract_term,same_scope_same_time,True
+B025,B025A,DOC_A,Termination requires 30 days' notice.,True,notice_period,same_scope_same_time,True
+B025,B025B,DOC_B,Termination requires 60 days' notice.,True,notice_period,same_scope_same_time,True
+B026,B026A,DOC_A,Feature X is enabled for administrators.,True,feature_flag,different_scope,True
+B026,B026B,DOC_B,Feature X is disabled for standard users.,True,feature_flag,different_scope,True
+B027,B027A,DOC_A,The service supports Python 3.11.,True,dependency_python,requirement_environment,True
+B027,B027B,DOC_B,The deployment image uses Python 3.9.,True,dependency_python,requirement_environment,True
+B028,B028A,DOC_A,The meeting starts at 10:00 AM UTC.,True,meeting_time,different_timezone,True
+B028,B028B,DOC_B,The meeting starts at 10:00 AM India Standard Time.,True,meeting_time,different_timezone,True
+B029,B029A,DOC_A,Scholarship applications close on 15 March 2026.,True,scholarship_deadline,same_scope_same_time,True
+B029,B029B,DOC_B,Scholarship applications close on 15 March 2026.,True,scholarship_deadline,same_scope_same_time,True
+B030,B030A,DOC_A,Undergraduate applications close on 15 March.,True,scholarship_scope,different_scope,True
+B030,B030B,DOC_B,Postgraduate applications close on 30 March.,True,scholarship_scope,different_scope,True

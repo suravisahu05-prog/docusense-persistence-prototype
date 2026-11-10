@@ -1,0 +1,31 @@
+case_id,topic,statement_a,statement_b,gold_label,scenario_type,rationale
+B001,registration_deadline,Course registration closes Friday.,Course registration closes Wednesday.,CONTRADICTION,same_scope_same_time,Both apply to all students in the same registration period.
+B002,refund_window,Customers may request refunds within 30 days.,Refund requests must be submitted within 14 days.,CONTRADICTION,same_scope_same_time,Same customer population and policy period; incompatible deadlines.
+B003,warranty_laptop,The laptop has a 24-month warranty.,The battery has a 12-month warranty.,SCOPE_DIFFERENCE,different_scope,Full product versus battery component; scopes differ.
+B004,refund_historical,The refund window was 30 days in the 2024 policy.,The refund window is 14 days under the 2025 policy.,TEMPORAL_CHANGE,non_overlapping_time,Later policy may supersede earlier policy; not a current contradiction.
+B005,refund_current,The 2026 policy allows refunds within 30 days.,The 2026 website says refunds must be requested within 14 days.,CONTRADICTION,same_scope_same_time,Same current period and scope; conflicting values.
+B006,java_requirement,The application requires Java 17 or later.,The production server runs Java 11.,DEPENDENCY_CONFLICT,requirement_environment,Environment does not satisfy stated requirement.
+B007,office_hours,The support desk opens at 9:00 AM.,The support desk opens at 9:00 AM.,ENTAILED,same_scope_same_time,Claims agree.
+B008,attendance_remote,On-campus students must maintain 75% attendance.,Online students must maintain 60% attendance.,SCOPE_DIFFERENCE,different_scope,Different student modalities.
+B009,leave_limit,Employees receive 18 days of annual leave.,Employees receive 12 days of annual leave.,CONTRADICTION,same_scope_same_time,Same employee group and year assumed by test.
+B010,leave_update,The 2023 handbook provided 15 days of annual leave.,The 2025 handbook provides 18 days of annual leave.,TEMPORAL_CHANGE,non_overlapping_time,Policy value changed across editions.
+B011,tax_unit,"The fee is INR 10,000 per semester.","The fee is INR 10,000 per academic year.",NEUTRAL,different_period_basis,Different time basis; cannot compare without conversion/context.
+B012,shipping_scope,Domestic delivery takes 3–5 business days.,International delivery takes 7–12 business days.,SCOPE_DIFFERENCE,different_scope,Domestic and international shipping.
+B013,password_length,Passwords must contain at least 12 characters.,Passwords must contain at least 8 characters.,CONTRADICTION,same_scope_same_time,Requirements differ; stricter rule may coexist only if policy precedence is known.
+B014,password_additional,Passwords must contain at least 12 characters.,Passwords must include at least one number.,NEUTRAL,different_attribute,Length and composition are compatible attributes.
+B015,retention,Logs are retained for 90 days.,Logs are retained for 30 days.,CONTRADICTION,same_scope_same_time,Same log category and period.
+B016,retention_superseded,Logs were retained for 90 days until June 2024.,"Since July 2024, logs are retained for 30 days.",TEMPORAL_CHANGE,non_overlapping_time,Explicit effective-date transition.
+B017,minimum_age,Applicants must be at least 18 years old.,Applicants must be at least 21 years old.,CONTRADICTION,same_scope_same_time,Same applicant category and intake.
+B018,age_scope,Applicants to the standard program must be 18+.,Applicants to the advanced program must be 21+.,SCOPE_DIFFERENCE,different_scope,Different programs.
+B019,api_rate,The API limit is 100 requests per minute.,The API limit is 100 requests per hour.,CONTRADICTION,same_scope_same_time,"Same endpoint, materially different rate window."
+B020,currency,The application fee is USD 100.,The application fee is EUR 100.,NEUTRAL,different_currency,Currencies differ; conversion and locale context needed.
+B021,backup_frequency,Database backups run every 24 hours.,Database backups run once per day.,ENTAILED,same_scope_same_time,Equivalent frequency.
+B022,data_region,Customer data is stored in the EU region.,Customer data is stored in the US region.,CONTRADICTION,same_scope_same_time,Same dataset is assigned incompatible exclusive regions.
+B023,data_region_scope,Production data is stored in the EU.,Analytics replicas are stored in the US.,SCOPE_DIFFERENCE,different_scope,Different data copies/purposes.
+B024,contract_term,The contract term is 12 months.,The contract term is one year.,ENTAILED,same_scope_same_time,Equivalent duration.
+B025,notice_period,Termination requires 30 days' notice.,Termination requires 60 days' notice.,CONTRADICTION,same_scope_same_time,Same contract class and period.
+B026,feature_flag,Feature X is enabled for administrators.,Feature X is disabled for standard users.,SCOPE_DIFFERENCE,different_scope,Different user roles.
+B027,dependency_python,The service supports Python 3.11.,The deployment image uses Python 3.9.,DEPENDENCY_CONFLICT,requirement_environment,Deployment runtime is below stated requirement.
+B028,meeting_time,The meeting starts at 10:00 AM UTC.,The meeting starts at 10:00 AM India Standard Time.,NEUTRAL,different_timezone,Same clock time but different time zones; normalize before comparison.
+B029,scholarship_deadline,Scholarship applications close on 15 March 2026.,Scholarship applications close on 15 March 2026.,ENTAILED,same_scope_same_time,Claims agree.
+B030,scholarship_scope,Undergraduate applications close on 15 March.,Postgraduate applications close on 30 March.,SCOPE_DIFFERENCE,different_scope,Different applicant levels.

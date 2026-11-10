@@ -1,0 +1,10 @@
+[
+  {"id":"TC-01","a":"Sensor request timeout is 60 seconds.","b":"Cloud gateway request timeout limit is 30 seconds.","expected":"potential_operational_conflict"},
+  {"id":"TC-02","a":"Sensor polling interval is 60 seconds.","b":"Cloud gateway timeout limit is 30 seconds.","expected":"potential_operational_conflict"},
+  {"id":"TC-03","a":"Device request timeout is 60 seconds.","b":"Device request timeout is 30 seconds.","expected":"direct_conflict"},
+  {"id":"TC-04","a":"Firmware v1.2 retry interval is 5 seconds.","b":"Firmware v1.3 retry interval is 10 seconds.","expected":"temporal_supersession_pending"},
+  {"id":"TC-05","a":"Sensor maximum operating temperature is 70 C.","b":"Gateway maximum operating temperature is 55 C.","expected":"scope_difference"},
+  {"id":"TC-06","a":"Device maximum payload size is 1 MB.","b":"Cloud API maximum payload size is 512 KB.","expected":"integration_limit_pending"},
+  {"id":"TC-07","a":"Supply voltage is 5 V.","b":"Supply voltage is 5 V.","expected":"consistent"},
+  {"id":"TC-08","a":"Device supply voltage is 5 V.","b":"Device supply voltage is 12 V.","expected":"direct_conflict"}
+]
